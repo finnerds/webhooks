@@ -1,18 +1,20 @@
 import hmac
 from hashlib import sha1
 
+import requests
 from django.conf import settings
-from django.http import HttpResponse, HttpResponseForbidden, HttpResponseServerError
+from django.http import (HttpResponse, HttpResponseForbidden,
+                         HttpResponseServerError)
+from django.utils.encoding import force_bytes
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
-from django.utils.encoding import force_bytes
 
-import requests
 from ipaddress import ip_address, ip_network
+
 
 @require_POST
 @csrf_exempt
-def hello(request):
+def ping(request):
     # Verify if request came from GitHub
     forwarded_for = u'{}'.format(request.META.get('HTTP_X_FORWARDED_FOR'))
     client_ip_address = ip_address(forwarded_for)
@@ -48,4 +50,4 @@ def hello(request):
         return HttpResponse('success')
 
     # In case we receive an event that's not ping or push
-return HttpResponse(status=204)
+    return HttpResponse(status=204)
