@@ -1,8 +1,7 @@
 from django.conf.urls import url
-
-from . import views
+from views import github_ping
 
 urlpatterns = [
-    url(r'^github_ping/$', views.github_ping, name='github_ping'),
-    url(r'^openid/', include('oidc_provider.urls', namespace='oidc_provider')),
+    url(r'^github_ping/$', views.github_ping, name='webhook_github_ping'),
+    url(r'^openid/', include('oidc_provider.urls', namespace='webhook_oidc_provider')),
 ]
