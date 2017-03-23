@@ -12,7 +12,7 @@ from ipaddress import ip_address, ip_network
 
 @require_POST
 @csrf_exempt
-def github_ping(request):
+def ping(request):
     # Verify if request came from GitHub
     forwarded_for = u'{}'.format(request.META.get('HTTP_X_FORWARDED_FOR'))
     client_ip_address = ip_address(forwarded_for)
