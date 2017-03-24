@@ -12,3 +12,5 @@ MarkupSafe==1.0
 requests==2.13.0
 tox==2.6.0
 coverage==4.3.4
+ipaddress==1.0.18
+
