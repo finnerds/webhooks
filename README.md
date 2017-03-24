@@ -2,7 +2,7 @@
 
 Webhooks, initialy just a github showcase. Github will not be able to send a "webhook-event" to this webhook-example without a fully qualified domainname or ip-address.
 
-![Github Webhook](https://github.com/finnerds/webhook/blob/feature/generate_docs_folder/docs/img/finnerds-webhook.png "Github Webhook")
+![Github Webhook](https://github.com/finnerds/webhook/blob/master/docs/img/finnerds-webhook.png)
 
 For our webhooks we do need a token. For that reason we add a token provider. Generate server RSA key and run migrations (if you don’t):
 
