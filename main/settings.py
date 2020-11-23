@@ -41,7 +41,6 @@ INSTALLED_APPS = [
 
 INSTALLED_APPS += [
     'webhook',
-    'oidc_provider',
 ]
 
 MIDDLEWARE = [
