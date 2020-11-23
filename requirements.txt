@@ -4,12 +4,8 @@ django-debug-toolbar
 django-decorator-include
 django-extensions
 docutils
-flake8
-future
-isort
 Jinja2
 MarkupSafe
 requests
 tox
-coverage
 ipaddress
